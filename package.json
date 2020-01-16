@@ -1,0 +1,14 @@
+{
+  "name": "logrwatch-electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:melkzsiqueira/logrwatch-electron.git",
+  "author": "melkzsiqueira <melkzsiqueira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^7.1.9"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
