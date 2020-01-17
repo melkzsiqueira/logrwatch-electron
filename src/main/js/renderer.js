@@ -51,23 +51,23 @@ function handleWindowControls(){
 function styleSheet(){
 
     var head = document.head;
-    //var link = null;
+    var link = null;
     var ref = [
         '../../../node_modules/electron-tabs/electron-tabs.css',
         '../css/main.css'
     ];
 
-    //for(var i = 0; i < ref.length; i++){
+    for(var i = 0; i < ref.length; i++){
 
         var link = document.createElement('link');
 
         link.type = 'text/css';
         link.rel = 'stylesheet';
-        link.href = ref[1];
+        link.href = ref[i];
 
         head.appendChild(link);
 
-    //}
+    }
 
 }
 
