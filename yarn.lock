@@ -135,6 +135,11 @@ duplexer3@^0.1.4:
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
+electron-tabs@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/electron-tabs/-/electron-tabs-0.11.0.tgz#ecd0e4754e3b0a24b64b0135147a72962ca8fa92"
+  integrity sha512-nFOhocyMMALBGCJNCQlmSslSTiUanb1mLC0itds2xn7fQa+h5jKSS/pkdHC8dm/dPPjELn/omdzGhMhWbLAl8Q==
+
 electron@^7.1.9:
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/electron/-/electron-7.1.9.tgz#5053195d2e476a3ecd881ece4edf64f0a8c32fa3"

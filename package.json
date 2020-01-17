@@ -1,12 +1,13 @@
 {
   "name": "logrwatch-electron",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "./src/main/js/main.js",
   "repository": "git@github.com:melkzsiqueira/logrwatch-electron.git",
   "author": "melkzsiqueira <melkzsiqueira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "electron": "^7.1.9"
+    "electron": "^7.1.9",
+    "electron-tabs": "^0.11.0"
   },
   "scripts": {
     "start": "electron ."
