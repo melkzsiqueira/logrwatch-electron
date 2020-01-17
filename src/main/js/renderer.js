@@ -1,6 +1,9 @@
 const { remote } = require('electron');
 const TabGroup = require("electron-tabs");
 const path = require('path');
+const { dialog } = require('electron').remote;
+const fs = require('fs');
+const url = require('url');
 
 // When document has loaded, initialise
 document.onreadystatechange = () => {
@@ -89,3 +92,15 @@ tabGroup.addTab({
     visible: true,
 });
 
+tabGroup.on('tab-added', (tab, tabGroup) => {
+
+    dialog.showOpenDialog({
+        properties: ['openFile']
+    }).then((data) => {
+        //console.log(url.pathToFileURL(data.filePaths[0]));
+        console.log();
+        let webview = tab.webview;
+        webview.loadURL(data.filePaths[0]);
+    });
+
+});
