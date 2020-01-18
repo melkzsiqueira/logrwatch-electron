@@ -56,7 +56,7 @@ function styleSheet(){
     var head = document.head;
     var link = null;
     var ref = [
-        '../../../node_modules/electron-tabs/electron-tabs.css',
+        '../css/tabs.css',
         '../css/main.css'
     ];
 
@@ -92,15 +92,22 @@ tabGroup.addTab({
     visible: true,
 });
 
-tabGroup.on('tab-added', (tab, tabGroup) => {
+tabGroup.on('tab-added', (tab) => {
 
     dialog.showOpenDialog({
+
         properties: ['openFile']
+
     }).then((data) => {
-        //console.log(url.pathToFileURL(data.filePaths[0]));
-        console.log();
+
+        var path = data.filePaths[0]
+        var pathFile = new URL(`file:///${path}`).href;
         let webview = tab.webview;
-        webview.loadURL(data.filePaths[0]);
+        
+        webview.loadURL(pathFile);
+        tab.activate();
+
     });
 
 });
+

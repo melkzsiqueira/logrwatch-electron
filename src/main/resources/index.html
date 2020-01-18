@@ -4,17 +4,32 @@
         <meta charset="UTF-8">
         
         <title>Hello World!</title>
-        <link rel="stylesheet" href="../css/tabs.css" type="text/css">
     </head>
 
     <body style="margin:0">
         <header id="titlebar">
-            <div id="window-title">
-                <span>Electron quick start</span>
-            </div>
-            
             <div id="drag-region">
-                <div id="window-controls">
+                                
+                <div id="file-controls"> 
+                    <div id="logo">
+                        <span>Logo</span>
+                    </div>
+                    <div class="button" id="file-button">
+                        <span>File</span>
+                    </div>
+                    <div class="button" id="settings-button">
+                        <span>Settings</span>
+                    </div>
+                    <div class="button" id="help-button">
+                        <span>Help</span>
+                    </div>
+                </div>
+
+                <div style="margin-right: auto; margin-left: auto;" id="window-title">
+                    <span>Electron quick start</span>
+                </div>
+                
+                <div id="window-controls"> 
                     <div class="button" id="min-button">
                         <span>&#xE921;</span>
                     </div>
@@ -40,7 +55,7 @@
                 <div class="etabs-buttons"></div>
             </div>
 
-            <div class="etabs-views">
+            <div class="etabs-views" style="top:64px;">
             </div>
         </div>
   
