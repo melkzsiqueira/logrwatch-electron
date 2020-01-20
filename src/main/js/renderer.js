@@ -53,24 +53,32 @@ function handleWindowControls(){
 
 function styleSheet(){
 
+    var i = document.createElement('i'); 
+    var icon = document.createTextNode('add');    
     var head = document.head;
     var link = null;
     var ref = [
+
+        'https://fonts.googleapis.com/icon?family=Material+Icons',
         '../css/tabs.css',
         '../css/main.css'
     ];
 
-    for(var i = 0; i < ref.length; i++){
+    for(var x = 0; x < ref.length; x++){
 
         var link = document.createElement('link');
 
         link.type = 'text/css';
         link.rel = 'stylesheet';
-        link.href = ref[i];
+        link.href = ref[x];
 
         head.appendChild(link);
 
     }
+
+    i.appendChild(icon);    
+    document.getElementsByClassName('etabs-tab-button-new')[0].textContent = '';
+    document.getElementsByClassName('etabs-tab-button-new')[0].appendChild(i).className = 'material-icons';
 
 }
 
@@ -100,14 +108,22 @@ tabGroup.on('tab-added', (tab) => {
 
     }).then((data) => {
 
-        var path = data.filePaths[0]
-        var pathFile = new URL(`file:///${path}`).href;
+        var pathData = data.filePaths[0]
+        var pathFile = new URL(`file:///${pathData}`).href;
+        var fileName = path.parse(pathData).base;
         let webview = tab.webview;
         
         webview.loadURL(pathFile);
+        document.getElementById('title-name').textContent = fileName + ' - LogrWatch';
+        tab.setTitle(fileName);
         tab.activate();
 
     });
 
 });
 
+tabGroup.on('tab-active', (tab) => {
+
+    document.getElementById('title-name').textContent = tab.getTitle() + ' - LogrWatch';
+    
+});
