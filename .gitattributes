@@ -1,1 +1,2 @@
 *.js linguist-detectable=true
+logrwatch-electron/src/main/css/* linguist-vendored
