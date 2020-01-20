@@ -1,2 +1,4 @@
+* linguist-vendored
+*.css linguist-vendored=false
 css/* linguist-vendored
 logrwatch-electron/src/main/css/* linguist-vendored
