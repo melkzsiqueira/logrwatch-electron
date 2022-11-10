@@ -6,7 +6,7 @@
   "author": "melkzsiqueira <melkzsiqueira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "electron": "^7.1.9",
+    "electron": "^18.3.7",
     "electron-tabs": "^0.11.0"
   },
   "scripts": {
